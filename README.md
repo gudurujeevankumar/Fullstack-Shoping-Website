@@ -1,247 +1,101 @@
-# PROGRESSIVE WEB APPLICATION
+# 🛒 PWA E-Commerce Platform – CODTECH Internship Task 4
 
-This is internship task at CODTECH IT SOLUTIONS PVT.LTD
+This is Task 4 of my internship at CODTECH IT SOLUTIONS PVT. LTD, focused on building a Progressive Web Application (PWA) for e-commerce.
 
-### Details
+Internship Details:
+- Name: Guduru Jeevan Kumar
+- ID: CT08DM730
+- Domain: Full Stack Web Development
+- Task: 4 – Progressive Web Application (PWA)
 
-- Intern Name : Guduru Jeevan Kumar
-- Intern ID :CT08DM730
-- Internship Domain : Full Stack Web Development
-- Task Number : 4 ( PROGRESSIVE WEB APPLICATION )
-# PWA E-Commerce Platform 🛒
+Features:
 
-A modern Progressive Web Application (PWA) for e-commerce built with React, featuring offline functionality, push notifications, and a seamless shopping experience.
+E-Commerce:
+- Product catalog with filters and categories
+- Product details with ratings and reviews
+- Shopping cart with real-time updates
+- Responsive, mobile-friendly layout
 
-## ✨ Features
+PWA Capabilities:
+- Offline access with service workers
+- Installable on desktop & mobile
+- Push notifications for offers and updates
 
-### 🛍️ E-Commerce Core
-- **Product Catalog** - Browse and filter products by category and price
-- **Shopping Cart** - Add, remove, and manage items with real-time updates
-- **Product Details** - Detailed product pages with ratings and reviews
-- **Search & Filter** - Find products quickly with advanced filtering
-- **Responsive Design** - Optimized for all devices and screen sizes
+UI/UX:
+- Built with React + Tailwind CSS
+- Clean animations and transitions
+- Mobile-first and accessible design
 
-### 📱 PWA Capabilities
-- **Offline Functionality** - Browse cached products without internet
-- **Installable** - Add to home screen for native app experience
-- **Push Notifications** - Receive updates about new products and offers
-- **Service Worker** - Background sync and caching strategies
-- **Fast Loading** - Optimized performance with lazy loading
+Quick Setup:
 
-### 🎨 Modern UI/UX
-- **Tailwind CSS** - Modern, responsive design system
-- **Smooth Animations** - Engaging micro-interactions and transitions
-- **Dark Theme Ready** - Beautiful gradient backgrounds
-- **Mobile First** - Optimized for mobile devices
-- **Accessibility** - WCAG compliant design
+git clone https://github.com/gudurujeevankumar/Fullstack-Shoping-Website.git
+cd Fullstack-Shoping-Website
+npm install
+npm run dev
 
-## 🚀 Quick Start
+Then open your browser at:
+http://localhost:8080
 
-### Prerequisites
-- Node.js 18+ and npm
-- Modern web browser with PWA support
+Project Structure:
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd pwa-ecommerce
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:8080`
-
-## 📦 Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-│   ├── Header.tsx      # Navigation and cart icon
-│   ├── ProductCard.tsx # Product display card
-│   ├── Cart.tsx        # Shopping cart sidebar
-│   ├── Hero.tsx        # Landing page hero
-│   └── Footer.tsx      # Site footer
-├── context/            # React context providers
-│   └── CartContext.tsx # Shopping cart state management
-├── hooks/              # Custom React hooks
-│   ├── usePWA.tsx     # PWA installation logic
-│   └── useNotifications.tsx # Push notification handling
-├── data/              # Mock data and constants
-│   └── products.ts    # Product catalog data
-├── types/             # TypeScript type definitions
-│   └── index.ts       # Shared interfaces
-└── pages/             # Page components
-    └── Index.tsx      # Main application page
-
+```src/
+├── components/     → Header, Cart, ProductCard, etc.
+├── context/        → CartContext for state management
+├── hooks/          → usePWA, useNotifications
+├── data/           → Product catalog data
+├── pages/          → Main page
 public/
-├── manifest.json      # PWA manifest configuration
-└── sw.js             # Service worker for offline functionality
+├── manifest.json   → PWA config
+└── sw.js           → Service worker
 ```
+PWA Features:
+- Offline Mode — Cached static + product data
+- Push Notifications — Welcome messages, product updates
+- Install Prompt — Add to home screen support
+- Background Sync — Reliable sync after reconnect
 
-## 🔧 PWA Configuration
+Development Scripts:
 
-### Service Worker Features
-- **Asset Caching** - Static files cached for offline access
-- **API Caching** - Product data cached with Cache API
-- **Background Sync** - Sync data when connection restored
-- **Push Notifications** - Handle incoming notifications
+npm run dev       - Start dev server
+npm run build     - Build for production
+npm run preview   - Preview production build
+npm run lint      - Lint the codebase
 
-### Installation Prompt
-The app automatically detects when it can be installed and shows an install button in the header. Users can:
-- Install on desktop via browser install prompt
-- Add to home screen on mobile devices
-- Access app offline after installation
+Screenshots:
 
-### Push Notifications
-- **Permission Request** - Automatic permission request on first visit
-- **Welcome Notifications** - Greet users with personalized messages
-- **Product Updates** - Notify about new products and sales
-- **Order Status** - Update users about their orders
+## Preview : 
 
-## 🛠️ Development
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/23c552e0-9691-429f-8a90-daa67ac5dc02" width="100%" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/4b89f810-8a76-4969-aa88-1797f75860cf" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/09831626-122e-4fe5-8fe6-c22984ecae75" width="100%" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/42d33a86-9776-47af-96f5-d1bf21f9f1d2" width="100%" />
+    </td>
+  </tr>
+</table>
 
-### Available Scripts
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
 
-### Adding New Features
+Deployment Instructions (Netlify): https://fullstack-shopping-website.netlify.app/
 
-#### Adding Products
-Edit `src/data/products.ts` to add new products:
+npm run build
 
-```typescript
-{
-  id: 'unique-id',
-  name: 'Product Name',
-  description: 'Product description',
-  price: 99.99,
-  image: '/path/to/image.jpg',
-  category: 'Category',
-  rating: 4.5,
-  reviews: 123,
-  inStock: true
-}
-```
+Set build command as: npm run build
+Set output directory as: dist
 
-#### Customizing Notifications
-Modify `src/hooks/useNotifications.tsx` to customize notification behavior:
+Make sure your app is served over HTTPS for full PWA features.
 
-```typescript
-const sendCustomNotification = (title: string, body: string) => {
-  sendNotification(title, {
-    body,
-    icon: '/custom-icon.png',
-    vibrate: [200, 100, 200]
-  });
-};
-```
+License:
 
-## 🌐 Deployment
+This project is licensed under the MIT License.
 
-### Frontend Deployment (Vercel/Netlify)
-1. **Build the project**
-   ```bash
-   npm run build
-   ```
-
-2. **Deploy to Vercel**
-   ```bash
-   npm install -g vercel
-   vercel deploy
-   ```
-
-3. **Deploy to Netlify**
-   - Connect your Git repository
-   - Set build command: `npm run build`
-   - Set publish directory: `dist`
-
-### PWA Optimization
-- Ensure HTTPS for PWA features
-- Test installation on different devices
-- Verify offline functionality
-- Check Lighthouse PWA score
-
-## 📊 Performance Optimization
-
-### Lighthouse Scores
-Target scores for optimal PWA performance:
-- **Performance**: 90+
-- **Accessibility**: 95+
-- **Best Practices**: 95+
-- **SEO**: 90+
-- **PWA**: 100
-
-### Optimization Techniques
-- **Code Splitting** - Lazy load components
-- **Image Optimization** - WebP format with fallbacks
-- **Caching Strategy** - Efficient service worker caching
-- **Bundle Analysis** - Monitor bundle size
-
-## 🔐 Security & Privacy
-
-### Data Protection
-- No sensitive data stored in localStorage
-- Secure API communication (HTTPS only)
-- Input validation and sanitization
-- XSS protection with Content Security Policy
-
-### Offline Security
-- Cached data encryption
-- Secure service worker implementation
-- Safe notification handling
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙋‍♂️ Support
-
-For support and questions:
-- 📧 Email: support@pwashop.com
-- 🐛 Issues: GitHub Issues
-- 💬 Discussions: GitHub Discussions
-
-## 🎯 Roadmap
-
-### Phase 1 ✅
-- [x] Basic e-commerce functionality
-- [x] PWA implementation
-- [x] Offline support
-- [x] Push notifications
-
-### Phase 2 🚧
-- [ ] User authentication
-- [ ] Order management
-- [ ] Payment integration
-- [ ] Admin dashboard
-
-### Phase 3 📋
-- [ ] Advanced search
-- [ ] Wishlist functionality
-- [ ] Product reviews
-- [ ] Multi-language support
-
----
-
-Built with ❤️ using React, TypeScript, and modern web technologies.
+Built with ❤️ using React, TypeScript, and modern PWA technologies. in this text wraping is occuring
